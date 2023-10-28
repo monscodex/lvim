@@ -6,7 +6,19 @@ LunarVim takes care of the essential functionality and leverages you the weight 
 
 ## Install
 
-Just [install LunarVim](https://www.lunarvim.org/docs/installation). It will prompt you to install its dependencies: accept all of them.
+### 1. Neovim
+
+I compile neovim from source instead of depending on each distro's version, dependencies and update cycle.
+
+This way I have a more stable and cross-device consistent experience.
+
+Compiling neovim is surprisingly easy and convenient, [try it out!](https://github.com/neovim/neovim/wiki/Building-Neovim)
+
+### 2. LunarVim
+
+LunarVim has a [complete and convenient guide](https://www.lunarvim.org/docs/installation).
+
+LunarVim makes their own install script; run it and accept the installation of all of their optional dependencies.
 
 ## Philosophy
 My IDE is not a playground, it's a curated set of needed functionalities.
