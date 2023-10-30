@@ -21,6 +21,8 @@ local options = {
 	-- Split
 	splitbelow = true,                       -- force all horizontal splits to go below current window
 	splitright = true,                       -- force all vertical splits to go to the right of current window
+	--Spell
+	spell = false, -- Using linter instead
 	-- Tab vs Spaces options
 	showtabline = 0,
 	expandtab = false,                        -- convert tabs to spaces
@@ -53,8 +55,6 @@ local options = {
 	fileencoding = "utf-8",                  -- the encoding written to a file
 	mouse = "a",                             -- allow the mouse to be used in neovim
 }
-
-vim.opt.shortmess:append "c"
 
 
 for key, value in pairs(options) do
