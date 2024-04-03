@@ -6,6 +6,7 @@ reload("user.general.keymaps")
 reload("user.general.plugins")
 reload("user.general.colorscheme")
 reload("user.general.lsp")
+reload("user.general.autocommands")
 
 reload("user.plugin-config.whichkey")
 reload("user.plugin-config.treesitter")

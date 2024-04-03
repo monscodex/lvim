@@ -1,6 +1,8 @@
 -- Supported:
 -- tokyonight,,
 -- OceanicNext,
+-- cobalt2
+-- zephyr
 -- material,
 -- aurora
 -- nord,
@@ -11,7 +13,7 @@
 -- tomorrow,
 -- spacedark
 
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "material"
 
 local function make_comments_red()
 	vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
@@ -58,6 +60,10 @@ local function adjust_colorscheme_options()
 		vim.g.onedarker_italic_conditionals = true
 	elseif lvim.colorscheme == "gruvbox" then
 		vim.g.gruvbox_contrast_dark = "hard"
+	elseif lvim.colorscheme == "cobalt2" then
+		require("colorbuddy").colorscheme("cobalt2")
+	elseif lvim.colorscheme == "zephyr" then
+		require("zephyr")
 	end
 end
 

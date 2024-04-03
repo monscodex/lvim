@@ -19,7 +19,6 @@ require 'lvim.lsp.null-ls.linters'.setup {
 			diagnostic.severity = vim.diagnostic.severity.HINT
 		end,
 	},
-	{ name = "shellcheck" }
 }
 
 require 'lvim.lsp.null-ls.code_actions'.setup {

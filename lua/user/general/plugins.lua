@@ -5,7 +5,7 @@ lvim.plugins = {
 		-- When typing the arguments of fn, shows docs and highlights arguments
 		"ray-x/lsp_signature.nvim",
 		event = "BufRead",
-		config = function() require"lsp_signature".on_attach() end,
+		config = function() require "lsp_signature".on_attach() end,
 	},
 
 	-- Colorschemes
@@ -14,6 +14,12 @@ lvim.plugins = {
 	{ "morhetz/gruvbox" },
 	{ "joshdick/onedark.vim" },
 	{ "mhartington/oceanic-next" },
+	{
+		"lalitmee/cobalt2.nvim",
+		event = { "ColorSchemePre" }, -- if you want to lazy load
+		dependencies = { "tjdevries/colorbuddy.nvim" },
+	},
+	{ 'glepnir/zephyr-nvim' },
 
 	{ 'stevearc/dressing.nvim' }, -- Beautiful selection board and input boxes
 
@@ -23,7 +29,8 @@ lvim.plugins = {
 	},
 	{
 		"windwp/nvim-ts-autotag",
-		ft = { 'astro', 'md', 'markdown', 'html', 'js', 'jsx', 'php', 'tsx', 'ts', 'xml', 'vue', 'hbs', 'gjs', 'gts', 'map', 'svelte' },
+		ft = { 'astro', 'md', 'markdown', 'html', 'js', 'jsx', 'php', 'tsx', 'ts', 'xml', 'vue', 'hbs', 'gjs',
+			'gts', 'map', 'svelte' },
 		config = function()
 			require("nvim-ts-autotag").setup()
 		end,
@@ -50,7 +57,7 @@ lvim.plugins = {
 		-- Icon Picker
 		"ziontee113/icon-picker.nvim",
 		config = function()
-		require("icon-picker").setup({
+			require("icon-picker").setup({
 				disable_legacy_commands = true
 			})
 		end,
@@ -85,23 +92,31 @@ lvim.plugins = {
 		'smoka7/hop.nvim',
 		version = "*",
 		opts = {},
-		config = function ()
+		config = function()
 			local hop = require('hop')
 			hop.setup()
 
 			local directions = require('hop.hint').HintDirection
 			vim.keymap.set('', 'f', function()
 				hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
-			end, {remap=true})
+			end, { remap = true })
 			vim.keymap.set('', 'F', function()
 				hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
-			end, {remap=true})
+			end, { remap = true })
 			vim.keymap.set('', 't', function()
-				hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
-			end, {remap=true})
+				hop.hint_char1({
+					direction = directions.AFTER_CURSOR,
+					current_line_only = true,
+					hint_offset = -1
+				})
+			end, { remap = true })
 			vim.keymap.set('', 'T', function()
-				hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
-			end, {remap=true})
+				hop.hint_char1({
+					direction = directions.BEFORE_CURSOR,
+					current_line_only = true,
+					hint_offset = 1
+				})
+			end, { remap = true })
 		end
 	},
 	{
@@ -118,6 +133,7 @@ lvim.plugins = {
 			require('peek').setup()
 		end,
 	},
+
 	{
 		-- Edit cross-language embedded code blocks
 		'AckslD/nvim-FeMaco.lua',
@@ -125,13 +141,18 @@ lvim.plugins = {
 	},
 
 	{
+		'phelipetls/vim-hugo',
+		ft = { 'md', 'markdown', 'html' }
+	},
+
+	{
 		-- Remember last position when opened file
-		-- NOTE: No longer mantained
+		-- NOTE: No longer maintained
 		'ethanholz/nvim-lastplace',
 		config = function()
-			require'nvim-lastplace'.setup {
-				lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
-				lastplace_ignore_filetype = {"gitcommit", "gitrebase", "svn", "hgcommit"},
+			require 'nvim-lastplace'.setup {
+				lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+				lastplace_ignore_filetype = { "gitcommit", "gitrebase", "svn", "hgcommit" },
 				lastplace_open_folds = true
 			}
 		end
