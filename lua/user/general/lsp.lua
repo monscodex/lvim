@@ -11,18 +11,18 @@ lvim.lsp.installer.setup.ensure_installed = {
 
 
 require 'lvim.lsp.null-ls.linters'.setup {
-	{
-		name = "cspell",
+	-- {
+	-- 	name = "cspell",
 
-		-- force the severity to be HINT
-		diagnostics_postprocess = function(diagnostic)
-			diagnostic.severity = vim.diagnostic.severity.HINT
-		end,
-	},
+	-- 	-- force the severity to be HINT
+	-- 	diagnostics_postprocess = function(diagnostic)
+	-- 		diagnostic.severity = vim.diagnostic.severity.HINT
+	-- 	end,
+	-- },
 }
 
 require 'lvim.lsp.null-ls.code_actions'.setup {
-	{ name = "cspell" },
+	-- { name = "cspell" },
 }
 
 require 'lvim.lsp.null-ls.formatters'.setup {
