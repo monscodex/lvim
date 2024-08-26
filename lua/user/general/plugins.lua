@@ -125,13 +125,28 @@ lvim.plugins = {
 		opts = {}
 	},
 
+	-- {
+	-- 	-- Markdown preview
+	-- 	"toppair/peek.nvim",
+	-- 	event = { "VeryLazy" },
+	-- 	build = "deno task --quiet build:fast",
+	-- 	commit = "/ade044b0c1beadd918f867264d1a801e675ec1d7",
+	-- 	config = function()
+	-- 		require("peek").setup({
+	-- 			theme = 'dark',
+	-- 			app = 'webview'
+	-- 		})
+	-- 		vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+	-- 		vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+	-- 	end,
+	-- },
+
 	{
 		-- Markdown preview
-		'toppair/peek.nvim',
-		build = 'deno task --quiet build:fast',
-		config = function()
-			require('peek').setup()
-		end,
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { 'md', 'markdown' },
+		build = function() vim.fn["mkdp#util#install"]() end,
 	},
 
 	{

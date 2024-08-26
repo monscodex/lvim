@@ -60,8 +60,8 @@ end
 local function add_markdown_bindings()
 	lvim.builtin.which_key.mappings['m'] = {
 		name = "Markdown",
-		o = { "<cmd>lua require('peek').open()<cr>", "Open" },
-		c = { "<cmd>lua require('peek').close()<cr>", "Close" },
+		o = { "<cmd>MarkdownPreview<cr>", "Open" },
+		c = { "<cmd>MarkdownPreviewStop<cr>", "Close" },
 		e = { "<cmd>lua require('femaco.edit').edit_code_block()<cr>", "Edit Code" },
 	}
 end
