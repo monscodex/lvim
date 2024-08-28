@@ -68,3 +68,4 @@ lvim.builtin.telescope.defaults.mappings = {
 -- lvim.builtin.telescope.theme = 'dropdown'
 lvim.builtin.telescope.defaults.layout_strategy = 'horizontal'
 lvim.builtin.telescope.defaults.layout_config = { width = 0.80, height = 0.80 }
+lvim.builtin.telescope.defaults.file_ignore_patterns = { ".git/", ".cache", "%.pdf", "%.mp4", "%.zip" }
