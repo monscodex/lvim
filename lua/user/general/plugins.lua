@@ -32,7 +32,15 @@ lvim.plugins = {
 		ft = { 'astro', 'md', 'markdown', 'html', 'js', 'jsx', 'php', 'tsx', 'ts', 'xml', 'vue', 'hbs', 'gjs',
 			'gts', 'map', 'svelte' },
 		config = function()
-			require("nvim-ts-autotag").setup()
+			require("nvim-ts-autotag").setup({
+				opts = {
+					-- Defaults
+					enable_close = true, -- Auto close tags
+					enable_rename = false, -- Auto rename pairs of tags
+					enable_close_on_slash = false -- Auto close on trailing </
+				},
+				per_filetype = {}
+			})
 		end,
 	},
 

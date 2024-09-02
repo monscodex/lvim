@@ -6,7 +6,7 @@ lvim.lsp.installer.setup.ensure_installed = {
 	'pyright',
 	'tsserver',
 	'sqlls',
-	'yamlls'
+	'yamlls',
 }
 
 
