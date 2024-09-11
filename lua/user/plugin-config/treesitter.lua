@@ -1,12 +1,13 @@
 local function setup_treesitter_rainbow()
-	require'rainbow-delimiters.setup'.setup {
+	require 'rainbow-delimiters.setup'.setup {
 		query = {
 			[''] = 'rainbow-delimiters',
 		},
 		highlight = {
-			"TSRainbowBlue",
-			"TSRainbowYellow",
-			"TSRainbowRed",
+			"RainbowDelimiterBlue",
+			"RainbowDelimiterYellow",
+			"RainbowDelimiterGreen",
+			"RainbowDelimiterRed",
 		},
 	}
 

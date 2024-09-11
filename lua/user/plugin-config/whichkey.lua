@@ -9,11 +9,12 @@ remove_unused_keymaps()
 
 lvim.builtin.which_key.mappings['o'] = {
 	name = "Options",
-	w = { '<cmd>lua require("general.functions").toggle_option("wrap")<cr>', "Wrap" },
-	r = { '<cmd>lua require("general.functions").toggle_option("relativenumber")<cr>', "Relative" },
-	l = { '<cmd>lua require("general.functions").toggle_option("cursorline")<cr>', "Cursorline" },
-	s = { '<cmd>lua require("general.functions").toggle_option("spell")<cr>', "Spell" },
-	t = { '<cmd>lua require("general.functions").toggle_tabline()<cr>', "Tabline" },
+	w = { '<cmd>lua require("user.general.functions").toggle_option("wrap")<cr>', "Wrap" },
+	r = { '<cmd>lua require("user.general.functions").toggle_option("relativenumber")<cr>', "Relative" },
+	l = { '<cmd>lua require("user.general.functions").toggle_option("cursorline")<cr>', "Cursorline" },
+	s = { '<cmd>lua require("user.general.functions").toggle_option("spell")<cr>', "Spell" },
+	t = { '<cmd>lua require("user.general.functions").toggle_tabline()<cr>', "Tabline" },
+	d = { '<cmd>lua require("user.general.functions").toggle_diagnostics()<cr>', "Tabline" },
 };
 
 lvim.builtin.which_key.mappings['u'] = { "<cmd>UndotreeToggle<cr>", "Undotree" }
