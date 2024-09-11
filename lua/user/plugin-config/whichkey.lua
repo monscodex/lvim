@@ -15,6 +15,7 @@ lvim.builtin.which_key.mappings['o'] = {
 	s = { '<cmd>lua require("user.general.functions").toggle_option("spell")<cr>', "Spell" },
 	t = { '<cmd>lua require("user.general.functions").toggle_tabline()<cr>', "Tabline" },
 	d = { '<cmd>lua require("user.general.functions").toggle_diagnostics()<cr>', "Tabline" },
+	b = { '<cmd>Gitsigns toggle_current_line_blame<cr>', "Blame" }
 };
 
 lvim.builtin.which_key.mappings['u'] = { "<cmd>UndotreeToggle<cr>", "Undotree" }
